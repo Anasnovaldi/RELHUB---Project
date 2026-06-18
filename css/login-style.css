@@ -1,188 +1,484 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   RESET
+========================= */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
 
-height:100vh;
+    font-family:'Poppins',sans-serif;
 
-background:#fff;
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    135deg,
+    #ffffff,
+    #fff7ef
+    );
+
+    overflow-x:hidden;
 }
+
+/* =========================
+   BACKGROUND EFFECT
+========================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:600px;
+    height:600px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+    135deg,
+    #F59A6E,
+    #F46B27
+    );
+
+    top:-250px;
+    right:-250px;
+
+    opacity:.15;
+
+    z-index:-1;
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:500px;
+    height:500px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+    135deg,
+    #275060,
+    #356574
+    );
+
+    left:-250px;
+    bottom:-250px;
+
+    opacity:.08;
+
+    z-index:-1;
+}
+
+/* =========================
+   CONTAINER
+========================= */
 
 .container{
 
-display:flex;
+    min-height:100vh;
 
-height:100vh;
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:40px;
 }
 
-/* KIRI */
+/* =========================
+   LOGIN CARD
+========================= */
+
+.login-wrapper{
+
+    width:100%;
+    max-width:1200px;
+
+    display:flex;
+
+    background:white;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.08);
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
 
 .left-panel{
 
-width:50%;
+    width:50%;
 
-display:flex;
-flex-direction:column;
+    padding:60px;
 
-justify-content:center;
-align-items:center;
+    background:
+    linear-gradient(
+    135deg,
+    #275060,
+    #356574
+    );
 
-padding:50px;
+    color:white;
 
-background:
-linear-gradient(
-135deg,
-#275060,
-#356574
-);
+    display:flex;
+    flex-direction:column;
 
-color:white;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+}
+
+.left-panel::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,.08);
+
+    top:-100px;
+    right:-100px;
 }
 
 .left-panel img{
 
-width:180px;
+    width:180px;
 
-margin-bottom:25px;
+    margin-bottom:25px;
+
+    filter:drop-shadow(
+    0 10px 20px rgba(0,0,0,.2)
+    );
 }
 
 .left-panel h1{
 
-font-size:60px;
+    font-size:54px;
+
+    margin-bottom:10px;
 }
 
 .left-panel span{
 
-color:#F46B27;
+    color:#F59A6E;
 }
 
 .left-panel p{
 
-margin-top:20px;
+    font-size:16px;
 
-font-size:18px;
+    line-height:1.8;
 
-line-height:1.8;
-
-max-width:450px;
-
-text-align:center;
+    max-width:450px;
 }
 
-/* KANAN */
+.quote{
+
+    margin-top:40px;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    font-size:14px;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
 
 .right-panel{
 
-width:50%;
+    width:50%;
 
-display:flex;
+    padding:70px;
 
-justify-content:center;
-align-items:center;
+    display:flex;
 
-background:white;
+    justify-content:center;
+    align-items:center;
 }
 
 .login-box{
 
-width:400px;
+    width:100%;
+    max-width:420px;
 }
 
 .login-box h2{
 
-margin-bottom:30px;
+    color:#275060;
 
-color:#275060;
+    font-size:34px;
+
+    margin-bottom:10px;
 }
+
+.login-box .subtitle{
+
+    color:#6b7280;
+
+    margin-bottom:35px;
+}
+
+/* =========================
+   INPUT
+========================= */
 
 .input-group{
 
-margin-bottom:20px;
+    margin-bottom:20px;
 }
 
 .input-group label{
 
-display:block;
+    display:block;
 
-margin-bottom:8px;
+    margin-bottom:8px;
 
-font-weight:600;
+    font-weight:500;
+
+    color:#275060;
 }
 
 .input-group input{
 
-width:100%;
+    width:100%;
 
-padding:14px;
+    padding:16px;
 
-border:1px solid #ddd;
+    border:1px solid #e5e7eb;
 
-border-radius:10px;
+    border-radius:12px;
+
+    outline:none;
+
+    transition:.3s;
 }
 
-button{
+.input-group input:focus{
 
-width:100%;
+    border-color:#F46B27;
 
-padding:15px;
-
-border:none;
-
-border-radius:10px;
-
-cursor:pointer;
-
-font-size:16px;
-
-font-weight:600;
-
-color:white;
-
-background:
-linear-gradient(
-135deg,
-#F59A6E,
-#F46B27
-);
+    box-shadow:
+    0 0 0 4px rgba(244,107,39,.12);
 }
 
-button:hover{
+/* =========================
+   BUTTON
+========================= */
 
-opacity:.9;
+.login-btn{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:
+    linear-gradient(
+    135deg,
+    #F59A6E,
+    #F46B27
+    );
+
+    transition:.3s;
 }
 
-.login-box a{
+.login-btn:hover{
 
-display:block;
+    transform:translateY(-2px);
 
-margin-top:20px;
-
-text-decoration:none;
-
-color:#356574;
+    box-shadow:
+    0 15px 25px rgba(244,107,39,.25);
 }
 
-@media(max-width:900px){
+/* =========================
+   LINK
+========================= */
 
-.container{
+.back-link{
 
-flex-direction:column;
+    display:block;
+
+    text-align:center;
+
+    margin-top:20px;
+
+    text-decoration:none;
+
+    color:#356574;
+
+    font-weight:500;
 }
 
-.left-panel{
+/* =========================
+   TABLET
+========================= */
 
-width:100%;
-height:40vh;
+@media(max-width:992px){
+
+    .login-wrapper{
+
+        flex-direction:column;
+    }
+
+    .left-panel{
+
+        width:100%;
+        padding:50px;
+    }
+
+    .right-panel{
+
+        width:100%;
+        padding:50px;
+    }
+
+    .left-panel h1{
+
+        font-size:42px;
+    }
+
 }
 
-.right-panel{
+/* =========================
+   MOBILE
+========================= */
 
-width:100%;
-height:60vh;
+@media(max-width:576px){
+
+    .container{
+
+        padding:15px;
+    }
+
+    .login-wrapper{
+
+        border-radius:20px;
+    }
+
+    .left-panel{
+
+        padding:35px 25px;
+    }
+
+    .left-panel img{
+
+        width:120px;
+    }
+
+    .left-panel h1{
+
+        font-size:32px;
+    }
+
+    .left-panel p{
+
+        font-size:14px;
+    }
+
+    .right-panel{
+
+        padding:30px 20px;
+    }
+
+    .login-box h2{
+
+        font-size:28px;
+    }
+
 }
 
+/* =========================
+   SIGNUP BUTTON
+========================= */
+
+.signup-section{
+
+    text-align:center;
+
+    margin-top:25px;
+}
+
+.signup-section p{
+
+    color:#6b7280;
+
+    margin-bottom:12px;
+}
+
+.signup-btn{
+
+    width:100%;
+
+    display:inline-block;
+
+    padding:12px;
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    color:#275060;
+
+    border:2px solid #275060;
+
+    transition:.3s;
+}
+
+.signup-btn:hover{
+
+    background:#275060;
+
+    color:white;
 }
