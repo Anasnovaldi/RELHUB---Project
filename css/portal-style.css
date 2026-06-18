@@ -1,0 +1,523 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#ffffff;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+    padding:20px 8%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:fixed;
+    top:0;
+
+    background:rgba(255,255,255,.85);
+    backdrop-filter:blur(12px);
+
+    z-index:999;
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-container img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+}
+
+.logo-text h2{
+    color:#275060;
+    font-size:28px;
+}
+
+.logo-text span{
+    color:#F46B27;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#275060;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#F46B27;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 8%;
+
+    position:relative;
+}
+
+/* BACKGROUND SHAPES */
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+    height:600px;
+
+    background:linear-gradient(
+    135deg,
+    #F59A6E,
+    #F46B27
+    );
+
+    border-radius:50%;
+
+    top:-250px;
+    right:-250px;
+
+    opacity:.15;
+}
+
+.hero::after{
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    background:linear-gradient(
+    135deg,
+    #275060,
+    #356574
+    );
+
+    border-radius:50%;
+
+    bottom:-250px;
+    left:-250px;
+
+    opacity:.08;
+}
+
+/* LEFT */
+
+.hero-left{
+    width:50%;
+    z-index:2;
+}
+
+.badge{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    background:#FFF2EA;
+
+    color:#F46B27;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+}
+
+.hero-left h1{
+
+    font-size:65px;
+
+    line-height:1.1;
+
+    color:#275060;
+
+    margin-bottom:25px;
+}
+
+.hero-left h1 span{
+
+    color:#F46B27;
+}
+
+.hero-left p{
+
+    font-size:18px;
+
+    color:#5c6870;
+
+    line-height:1.8;
+
+    max-width:600px;
+
+    margin-bottom:35px;
+}
+
+/* BUTTON */
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+.btn-primary{
+
+    padding:15px 32px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:600;
+
+    background:linear-gradient(
+    135deg,
+    #F59A6E,
+    #F46B27
+    );
+
+    box-shadow:
+    0 10px 30px rgba(244,107,39,.25);
+}
+
+.btn-secondary{
+
+    padding:15px 32px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    color:#275060;
+
+    border:2px solid #275060;
+}
+
+/* RIGHT */
+
+.hero-right{
+    width:45%;
+
+    display:flex;
+    justify-content:center;
+
+    z-index:2;
+}
+
+.logo-card{
+
+    width:450px;
+    height:450px;
+
+    background:white;
+
+    border-radius:35px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.08);
+}
+
+.logo-card img{
+
+    width:70%;
+    object-fit:contain;
+}
+
+/* FOOTER */
+
+footer{
+
+    text-align:center;
+
+    padding:25px;
+
+    color:#6B92A0;
+
+    border-top:1px solid #eee;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:120px;
+    }
+
+    .hero-left{
+        width:100%;
+    }
+
+    .hero-right{
+        width:100%;
+        margin-top:50px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .hero-left h1{
+        font-size:45px;
+    }
+
+    .logo-card{
+        width:300px;
+        height:300px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        gap:20px;
+    }
+
+    .hero-left h1{
+        font-size:36px;
+    }
+
+}
+
+/* =========================
+   IMPACT SECTION
+========================= */
+
+.impact-section{
+
+    padding:100px 8%;
+
+    background:white;
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.section-title h2{
+
+    color:#275060;
+
+    font-size:38px;
+
+    margin-bottom:15px;
+}
+
+.section-title p{
+
+    color:#6b7280;
+}
+
+.impact-slider{
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+}
+
+.impact-slider::-webkit-scrollbar{
+
+    display:none;
+}
+
+.impact-track{
+
+    display:flex;
+
+    gap:25px;
+
+    padding-bottom:10px;
+}
+
+.impact-track img{
+
+    width:500px;
+
+    aspect-ratio:16/9;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+    flex-shrink:0;
+}
+
+/* =========================
+   HELP SECTION
+========================= */
+
+.help-section{
+
+    padding:100px 8%;
+
+    background:
+    linear-gradient(
+    180deg,
+    #ffffff,
+    #fff8f3
+    );
+}
+
+.help-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+.help-content h2{
+
+    font-size:48px;
+
+    color:#275060;
+
+    margin:20px 0;
+}
+
+.help-content p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#5c6870;
+
+    margin-top:20px;
+}
+
+.mini-badge{
+
+    background:#FFF2EA;
+
+    color:#F46B27;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    font-weight:600;
+}
+
+/* =========================
+   QURAN SECTION
+========================= */
+
+.quran-section{
+
+    padding:100px 8%;
+
+    background:white;
+}
+
+.quran-box{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:60px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #ffffff,
+    #fff7ef
+    );
+
+    box-shadow:
+    0 15px 50px rgba(0,0,0,.06);
+}
+
+.quran-box h2{
+
+    color:#275060;
+
+    margin-bottom:40px;
+
+    font-size:40px;
+}
+
+.arabic{
+
+    font-size:42px;
+
+    line-height:2;
+
+    color:#275060;
+
+    margin-bottom:25px;
+}
+
+.translation{
+
+    font-size:20px;
+
+    font-style:italic;
+
+    color:#5c6870;
+
+    margin-bottom:20px;
+}
+
+.quran-box small{
+
+    color:#F46B27;
+
+    font-weight:600;
+}
