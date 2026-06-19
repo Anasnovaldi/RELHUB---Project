@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RELHUB Admin - Transparansi Dana</title>
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+<body>
+
+<div class="admin-shell">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <img src="../assets/logo.png" alt="RELHUB">
+            <div>
+                <h2>RELHUB</h2>
+                <p>Admin Console</p>
+            </div>
+        </div>
+
+        <div class="admin-profile">
+            <div class="admin-avatar">A</div>
+            <h3>Admin RELHUB</h3>
+            <p>Administrator</p>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard-admin.html">Verifikasi Relawan</a>
+            <a class="active" href="transparansi-dana.html">Transparansi Dana</a>
+            <a href="admin-buat-berita.html">Buat Berita</a>
+            <a href="admin-buat-event.html">Buat Event Bencana</a>
+        </nav>
+
+        <a class="logout" href="../portal-website.html">Keluar</a>
+    </aside>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h1>Transparansi Dana</h1>
+            <p>Data dana ditampilkan per event agar mudah dikelola dan dihubungkan ke database.</p>
+        </div>
+
+        <section class="content-card">
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama Event</th>
+                            <th>Target Dana</th>
+                            <th>Dana Terkumpul</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Banjir Aceh</td>
+                            <td>Rp 50.000.000</td>
+                            <td>Rp 35.000.000</td>
+                        </tr>
+                        <tr>
+                            <td>Gempa Lombok</td>
+                            <td>Rp 75.000.000</td>
+                            <td>Rp 60.000.000</td>
+                        </tr>
+                        <tr>
+                            <td>Longsor Garut</td>
+                            <td>Rp 30.000.000</td>
+                            <td>Rp 18.000.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+</div>
+
+</body>
+</html>

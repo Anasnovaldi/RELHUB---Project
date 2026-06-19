@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Donasi GOPAY</title>
+
+<link rel="stylesheet"
+href="../css/gopay-style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="donation-card">
+
+        <img
+        src="../assets/logo.png"
+        alt="logo">
+
+        <h2>Donasi melalui GOPAY</h2>
+
+        <p>
+
+            Masukkan jumlah donasi
+            yang ingin Anda berikan.
+
+        </p>
+
+        <form>
+
+            <label>
+                Nominal Donasi
+            </label>
+
+            <input
+            type="number"
+            placeholder="Contoh: 50000">
+
+            <button
+            type="button"
+            class="pay-btn"
+            onclick="showSuccess()">
+                Bayar Sekarang
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- POPUP SUKSES -->
+
+<div id="successModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h2>Donasi Berhasil</h2>
+
+        <p>
+            Terima kasih telah berdonasi melalui RELHUB.
+            Bantuan Anda akan sangat berarti bagi mereka
+            yang membutuhkan.
+        </p>
+
+        <button onclick="closeModal()">
+            Kembali ke Dashboard
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+
+<script>
+
+function showSuccess(){
+    document.getElementById("successModal").style.display = "flex";
+}
+
+function closeModal(){
+    window.location.href = "dashboard-user.html";
+}
+
+</script>
+
+</html>

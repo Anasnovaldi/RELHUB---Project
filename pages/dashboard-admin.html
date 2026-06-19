@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RELHUB Admin - Verifikasi Relawan</title>
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+<body>
+
+<div class="admin-shell">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <img src="../assets/logo.png" alt="RELHUB">
+            <div>
+                <h2>RELHUB</h2>
+                <p>Admin Console</p>
+            </div>
+        </div>
+
+        <div class="admin-profile">
+            <div class="admin-avatar">A</div>
+            <h3>Admin RELHUB</h3>
+            <p>Administrator</p>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a class="active" href="dashboard-admin.html">Verifikasi Relawan</a>
+            <a href="transparansi-dana.html">Transparansi Dana</a>
+            <a href="admin-buat-berita.html">Buat Berita</a>
+            <a href="admin-buat-event.html">Buat Event Bencana</a>
+        </nav>
+
+        <a class="logout" href="../portal-website.html">Keluar</a>
+    </aside>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h1>Verifikasi Relawan</h1>
+            <p>Kelola pendaftaran relawan untuk event bencana yang dibuat admin.</p>
+        </div>
+
+        <section class="content-card">
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Event</th>
+                            <th>Nama Relawan</th>
+                            <th>Keahlian</th>
+                            <th>Tanggal Daftar</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RLV-001</td>
+                            <td>Banjir Aceh</td>
+                            <td>Dian Pratama</td>
+                            <td>Medis</td>
+                            <td>12 Juni 2026</td>
+                            <td><span class="badge pending">Pending</span></td>
+                            <td>
+                                <div class="data-item-actions">
+                                    <button type="button" class="btn btn-success">Terima</button>
+                                    <button type="button" class="btn btn-danger">Tolak</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>RLV-002</td>
+                            <td>Gempa Lombok</td>
+                            <td>Ahmad Fauzi</td>
+                            <td>Logistik</td>
+                            <td>13 Juni 2026</td>
+                            <td><span class="badge approved">Approved</span></td>
+                            <td>
+                                <div class="data-item-actions">
+                                    <button type="button" class="btn btn-success">Terima</button>
+                                    <button type="button" class="btn btn-danger">Tolak</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>RLV-003</td>
+                            <td>Longsor Garut</td>
+                            <td>Sinta Lestari</td>
+                            <td>SAR</td>
+                            <td>14 Juni 2026</td>
+                            <td><span class="badge rejected">Rejected</span></td>
+                            <td>
+                                <div class="data-item-actions">
+                                    <button type="button" class="btn btn-success">Terima</button>
+                                    <button type="button" class="btn btn-danger">Tolak</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+</div>
+
+</body>
+</html>

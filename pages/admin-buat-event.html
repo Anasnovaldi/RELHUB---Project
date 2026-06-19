@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RELHUB Admin - Buat Event Bencana</title>
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+<body>
+
+<div class="admin-shell">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <img src="../assets/logo.png" alt="RELHUB">
+            <div>
+                <h2>RELHUB</h2>
+                <p>Admin Console</p>
+            </div>
+        </div>
+
+        <div class="admin-profile">
+            <div class="admin-avatar">A</div>
+            <h3>Admin RELHUB</h3>
+            <p>Administrator</p>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard-admin.html">Verifikasi Relawan</a>
+            <a href="transparansi-dana.html">Transparansi Dana</a>
+            <a href="admin-buat-berita.html">Buat Berita</a>
+            <a class="active" href="admin-buat-event.html">Buat Event Bencana</a>
+        </nav>
+
+        <a class="logout" href="../portal-website.html">Keluar</a>
+    </aside>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h1>Buat Event Bencana</h1>
+            <p>Tambah event baru agar tampil di dashboard user untuk donasi dan relawan.</p>
+        </div>
+
+        <section class="section-block">
+            <h2 class="section-title">Tambah Event</h2>
+            <p class="section-desc">
+                Form ini dibuat sederhana supaya backend mudah melakukan CRUD dan menampilkan event di card dashboard user.
+            </p>
+
+            <form class="form-card">
+                <div class="form-grid">
+                    <div class="form-group span-2">
+                        <label for="title">Nama Event</label>
+                        <input type="text" id="title" name="title" placeholder="Contoh: Banjir Jakarta Selatan">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Lokasi</label>
+                        <input type="text" id="location" name="location" placeholder="Contoh: Jakarta Selatan">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="image">Gambar Event</label>
+                        <input type="file" id="image" name="image" accept="image/*">
+                    </div>
+
+                    <div class="form-group span-2">
+                        <label for="description">Deskripsi Event</label>
+                        <textarea id="description" name="description" placeholder="Jelaskan kondisi bencana dan kebutuhan bantuan"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset" class="btn">Reset</button>
+                    <button type="submit" class="btn btn-primary">Simpan Event</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="section-block">
+            <h2 class="section-title">Daftar Event</h2>
+            <p class="section-desc">
+                Daftar event yang sudah dibuat admin. Nanti backend bisa menambah, mengubah, atau menghapus data di sini.
+            </p>
+
+            <div class="data-list">
+                <div class="data-item">
+                    <div class="data-item-head">
+                        <div>
+                            <div class="data-item-title">Banjir Aceh</div>
+                            <div class="data-item-meta">Aceh | Membutuhkan relawan dan donasi logistik.</div>
+                        </div>
+                        <div class="data-item-actions">
+                            <button type="button" class="btn btn-soft">Edit</button>
+                            <button type="button" class="btn btn-danger">Hapus</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-item">
+                    <div class="data-item-head">
+                        <div>
+                            <div class="data-item-title">Gempa Lombok</div>
+                            <div class="data-item-meta">Lombok | Event aktif untuk bantuan dan relawan.</div>
+                        </div>
+                        <div class="data-item-actions">
+                            <button type="button" class="btn btn-soft">Edit</button>
+                            <button type="button" class="btn btn-danger">Hapus</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</div>
+
+</body>
+</html>
