@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donasi - RELHUB</title>
+    <link rel="stylesheet" href="../css/donasi-style.css">
+</head>
+<body>
+
+<div class="page">
+    <div class="donation-card">
+
+        <div class="donation-header">
+            <img src="../assets/logo.png" alt="logo">
+            <h2 id="paymentTitle">Donasi</h2>
+            <p>Masukkan nominal donasi yang ingin Anda berikan.</p>
+        </div>
+
+        <div class="donation-info">
+            <span>Event</span>
+            <strong>Banjir Aceh 2026</strong>
+        </div>
+
+        <div class="amount-box">
+            <label for="amount">Nominal Donasi</label>
+            <input type="text" id="amount" value="Rp 0" readonly>
+        </div>
+
+        <div class="quick-amount">
+            <button type="button" onclick="addAmount(10000)">10K</button>
+            <button type="button" onclick="addAmount(25000)">25K</button>
+            <button type="button" onclick="addAmount(50000)">50K</button>
+            <button type="button" onclick="addAmount(100000)">100K</button>
+        </div>
+
+        <div class="numpad">
+            <button type="button" onclick="appendNumber('1')">1</button>
+            <button type="button" onclick="appendNumber('2')">2</button>
+            <button type="button" onclick="appendNumber('3')">3</button>
+
+            <button type="button" onclick="appendNumber('4')">4</button>
+            <button type="button" onclick="appendNumber('5')">5</button>
+            <button type="button" onclick="appendNumber('6')">6</button>
+
+            <button type="button" onclick="appendNumber('7')">7</button>
+            <button type="button" onclick="appendNumber('8')">8</button>
+            <button type="button" onclick="appendNumber('9')">9</button>
+
+            <button type="button" onclick="appendNumber('000')">000</button>
+            <button type="button" onclick="appendNumber('0')">0</button>
+            <button type="button" onclick="deleteNumber()">←</button>
+        </div>
+
+        <button type="button" class="continue-btn" onclick="showSuccess()">
+            Continue
+        </button>
+
+        <p class="note">
+            Setelah dilanjutkan, sistem akan mencatat metode pembayaran yang dipilih sebelumnya.
+        </p>
+    </div>
+</div>
+
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <div class="success-icon">✓</div>
+        <h2>Donasi Berhasil</h2>
+        <p>
+            Terima kasih telah berdonasi melalui RELHUB.
+            Bantuan Anda akan sangat berarti bagi mereka yang membutuhkan.
+        </p>
+        <button type="button" onclick="closeModal()">
+            Kembali ke Dashboard
+        </button>
+    </div>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const method = (params.get("method") || "gopay").toLowerCase();
+
+    const titleMap = {
+        gopay: "Donasi melalui GoPay",
+        dana: "Donasi melalui DANA",
+        ovo: "Donasi melalui OVO",
+        bca: "Transfer Bank BCA",
+        bri: "Transfer Bank BRI",
+        bni: "Transfer Bank BNI",
+        indomaret: "Pembayaran Indomaret",
+        alfamart: "Pembayaran Alfamart",
+        alfamidi: "Pembayaran Alfamidi"
+    };
+
+    document.getElementById("paymentTitle").innerText = titleMap[method] || "Donasi";
+
+    let amountValue = "";
+
+    function formatAmount(raw) {
+        const number = raw ? Number(raw) : 0;
+        return "Rp " + number.toLocaleString("id-ID");
+    }
+
+    function updateDisplay() {
+        document.getElementById("amount").value = formatAmount(amountValue);
+    }
+
+    function appendNumber(num) {
+        amountValue += num;
+        amountValue = amountValue.replace(/^0+/, "");
+        updateDisplay();
+    }
+
+    function deleteNumber() {
+        amountValue = amountValue.slice(0, -1);
+        updateDisplay();
+    }
+
+    function addAmount(value) {
+        amountValue = String(value);
+        updateDisplay();
+    }
+
+    function showSuccess() {
+        document.getElementById("successModal").style.display = "flex";
+    }
+
+    function closeModal() {
+        window.location.href = "dashboard-user.html";
+    }
+
+    updateDisplay();
+</script>
+
+</body>
+</html>
